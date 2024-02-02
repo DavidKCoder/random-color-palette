@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --left-wheel: red
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Position the .car-model-box relative to this */
+  height: 100vh;
+  background-color: black;
+}
+
+.color-1,
+.color-2,
+.color-3,
+.color-4,
+.color-5,
+.color-6 {
+  width: calc(100% / 6);
+  height: 100vh;
+  writing-mode: vertical-lr;
+  text-align: end;
+}
+
+.color-1:hover,
+.color-2:hover,
+.color-3:hover,
+.color-4:hover,
+.color-5:hover,
+.color-6:hover {
+  width: calc(100% / 3);
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  cursor: pointer;
+}
+
+.color-1:hover span,
+.color-2:hover span,
+.color-3:hover span,
+.color-4:hover span,
+.color-5:hover span,
+.color-6:hover span {
+  display: inline-block;
+  transform: rotate(270deg);
+  margin: 0 0 0 25%;
+  font-size: 2rem;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+
+.color-1 span,
+.color-2 span,
+.color-3 span,
+.color-4 span,
+.color-5 span,
+.color-6 span {
+  display: inline-block;
+  transform: rotate(180deg);
+  padding: 25px 15px;
+  font-family: 'Teko', sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.color-1 {
+  background-color: #555555;
+}
+
+.color-2 {
+  background-color: #666666;
+}
+
+.color-3 {
+  background-color: #777777;
+}
+
+.color-4 {
+  background-color: #888888;
+}
+
+.color-5 {
+  background-color: #999999;
+}
+
+.color-6 {
+  background-color: #cccccc
+}
+
+.car-model-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.car-model {
+  position: relative;
+  width: 100%;
+}
+
+#shuffle {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
